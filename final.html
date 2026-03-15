@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Final File</title>
+
+<style>
+
+body{
+background:black;
+color:#00ff9c;
+font-family:monospace;
+text-align:center;
+padding-top:120px;
+transition: all 1s ease;
+}
+
+/* BUTTON */
+
+button{
+padding:15px 30px;
+font-size:18px;
+background:black;
+color:#00ff9c;
+border:2px solid #00ff9c;
+cursor:pointer;
+}
+
+/* MESSAGE */
+
+#decrypt{
+margin-top:20px;
+font-size:22px;
+}
+
+#message{
+display:none;
+margin-top:40px;
+font-size:28px;
+}
+
+/* HEART THEME */
+
+.love-theme{
+background:#ffe6eb;
+color:#ff2e63;
+font-family:Arial, sans-serif;
+}
+
+.love-theme button{
+background:white;
+color:#ff2e63;
+border:2px solid #ff2e63;
+}
+
+.hearts{
+font-size:40px;
+margin-top:20px;
+}
+
+</style>
+
+</head>
+
+<body id="body">
+
+<h1>FINAL FILE</h1>
+
+<p>All clues solved.</p>
+<p>Final message encrypted.</p>
+
+<button onclick="startDecrypt()">Decrypt Message</button>
+
+<div id="decrypt"></div>
+
+<div id="message">
+
+<h1>MESSAGE DECRYPTED</h1>
+
+<p>ik itne suspense se KAAFIII buildup hogya it aint that good but yea🙏😭 but I just wanted to say that I really do love you a lot. I love your voice notes, like genuinely hearing your voice just makes my day better. I love the random pictures you send too😋 (thodi si frequency increase karo pls pls pls pls pls pls😭), even if it’s something small or random it just… makes me feel closer to you. I love your texts, the way you talk, the little updates about your day, all of it. It’s those small things that I actually look forward to. And honestly I just can’t wait for that week in Jammu (IMMA MEET MY BABYYYYYYY) — finally getting to spend proper time with you, talk, roam around and just be with you without a screen in between. I’m really looking forward to that.
+
+Love you sm cutie😘
+</p>
+
+<div class="hearts">
+❤️ 💖 💗 💕 ❤️
+</div>
+
+</div>
+
+<script>
+
+function startDecrypt(){
+
+let messages = [
+"Accessing archive...",
+"Locating final message...",
+"Decrypting file...",
+"Final message found"
+];
+
+let i = 0;
+
+let interval = setInterval(function(){
+
+document.getElementById("decrypt").innerHTML = messages[i];
+
+i++;
+
+if(i >= messages.length){
+
+clearInterval(interval);
+
+setTimeout(function(){
+
+document.getElementById("decrypt").style.display="none";
+document.getElementById("message").style.display="block";
+
+/* CHANGE THEME */
+
+document.getElementById("body").classList.add("love-theme");
+
+},1000);
+
+}
+
+},1200);
+
+}
+
+</script>
+
+</body>
+
+</html>
